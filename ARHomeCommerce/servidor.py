@@ -2,7 +2,8 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+users = {}
 
-@app.get("/")
+@app.get("/login")
 async def root():
-    return {"message": "Hello World"}
+    return users
