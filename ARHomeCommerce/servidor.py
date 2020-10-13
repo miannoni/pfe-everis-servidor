@@ -84,17 +84,17 @@ async def del_student_data(user: User):
 
 ################### CARTAO ###################
 
-@app.get("/login/cartao")
-async def cartoes():
-    if (user.username in users.keys()):
-        if (user.password == users[user.username]["password"]):
-            return users[user.username]["cartoes"]
+# @app.get("/login/cartao")
+# async def cartoes():
+#     if (user.username in users.keys()):
+#         if (user.password == users[user.username]["password"]):
+#             return users[user.username]["cartoes"]
 
-@app.post("/login/cartao", response_description="Data added into the database")
-async def create_user_data(user: User):
-    if (user.username in users.keys()):
-        if (user.password == users[user.username]["password"]):
-            users[user.username]["cartoes"][] = user.cartoes
+# @app.post("/login/cartao", response_description="Data added into the database")
+# async def create_user_data(user: User):
+#     if (user.username in users.keys()):
+#         if (user.password == users[user.username]["password"]):
+#             users[user.username]["cartoes"][] = user.cartoes
 
 # @app.put("/login/cartao", response_description="Data modified in the database")
 # async def mod_student_data(user: User):
@@ -114,17 +114,17 @@ async def create_user_data(user: User):
 #         return "User " + user.username + " does not exist in database"
 
 ################### ENDERECO ###################
-@app.get("/login/endereco")
-async def cartoes():
-    if (user.username in users.keys()):
-        if (user.password == users[user.username]["password"]):
-            return users[user.username]["cartoes"]
+# @app.get("/login/endereco")
+# async def cartoes():
+#     if (user.username in users.keys()):
+#         if (user.password == users[user.username]["password"]):
+#             return users[user.username]["cartoes"]
 
-@app.post("/login/endereco", response_description="Data added into the database")
-async def create_user_data(user: User):
-    if (user.username in users.keys()):
-        if (user.password == users[user.username]["password"]):
-            users[user.username]["cartoes"] = user.cartoes
+# @app.post("/login/endereco", response_description="Data added into the database")
+# async def create_user_data(user: User):
+#     if (user.username in users.keys()):
+#         if (user.password == users[user.username]["password"]):
+#             users[user.username]["cartoes"] = user.cartoes
 
 ################### PEDIDO ###################
 
