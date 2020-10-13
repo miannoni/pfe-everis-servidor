@@ -19,9 +19,9 @@ async def root():
 @app.post("/login", response_description="Data added into the database")
 async def create_user_data(user: User):
     if (user.username not in users.keys()):
-        users[username] = user
+        users[user.username] = user
     return user.username + "'s data added into the database"
 
-@app.post("/login", response_description="Data added into the database")
+@app.put("/login", response_description="Data added into the database")
 async def add_student_data():
     return users
