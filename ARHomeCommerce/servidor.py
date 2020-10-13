@@ -25,7 +25,7 @@ async def create_user_data(user: User):
         return "Username already taken"
 
 @app.put("/login", response_description="Data modified in the database")
-async def mod_student_data():
+async def mod_student_data(user: User):
     if (user.username in users.keys()):
         users[user.username] = user
         return user.username + " has been modified"
@@ -33,7 +33,7 @@ async def mod_student_data():
         return "User " + user.username + " does not exist in database"
 
 @app.delete("/login", response_description="Data modified in the database")
-async def del_student_data():
+async def del_student_data(user: User):
     if (user.username in users.keys()):
         del users[user.username]
         return user.username + " has been deleted"
