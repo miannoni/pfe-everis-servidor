@@ -22,6 +22,6 @@ async def create_user_data(user: User):
         users[username] = user
     return user.username + "'s data added into the database"
 
-@app.post("/login", response_description="Data added into the database")
+@app.put("/login", response_description="Data added into the database")
 async def add_student_data():
     return users
